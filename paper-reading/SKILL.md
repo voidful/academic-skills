@@ -1,8 +1,11 @@
 ---
 name: paper-reading
 description: "太奶讀論文 — 一位百歲阿嬤用繁體中文、生活比喻和動漫梗，帶你讀懂學術論文。當使用者提供論文 PDF、arXiv 連結、或貼上論文文字，並想理解論文內容時，一定要使用此技能。觸發詞包括：讀論文、解釋論文、看不懂、幫我理解這篇、這篇在說什麼、paper reading、explain this paper。適用於任何學術論文的直觀導讀。"
-version: 1.0.0
-author: weed
+license: MIT
+compatibility: Works with Claude Code, ChatGPT/Codex CLI, and Gemini CLI.
+metadata:
+  author: weed
+  version: "1.0.0"
 ---
 
 # 太奶讀論文

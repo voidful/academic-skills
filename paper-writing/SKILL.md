@@ -1,8 +1,11 @@
 ---
 name: paper-writing
 description: "頂級會議論文寫作技能——以嚴格 reviewer 視角指導從草稿到終稿的完整寫作流程。當使用者要寫論文、改善論文草稿、修改特定章節（introduction、method、experiments、conclusion）、潤色學術英文、回應 reviewer 意見，或問「這段怎麼寫」時，一定要使用此技能。觸發詞包括：寫論文、paper writing、improve my paper、幫我修改、review comments、rebuttal、LaTeX、NeurIPS/ICLR/ACL 投稿。適用於所有學術論文寫作場景。"
-version: 1.1.0
-author: research-skills
+license: MIT
+compatibility: Works with Claude Code, ChatGPT/Codex CLI, and Gemini CLI.
+metadata:
+  author: research-skills
+  version: "1.1.0"
 ---
 
 # Paper Writing Skill

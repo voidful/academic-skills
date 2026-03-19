@@ -1,8 +1,11 @@
 ---
 name: experiment-design
 description: "學術研究實驗設計技能——從研究假設到可重現實驗計畫的完整流程。當使用者需要規劃實驗、設計 ablation study、選擇 baseline、確定評估指標，或問「我應該跑哪些實驗」時，一定要使用此技能。觸發詞包括：實驗設計、experiment design、ablation、baseline、跑什麼實驗、evaluation metric、如何驗證方法。適用於機器學習、NLP、CV 等領域的實驗規劃。"
-version: 1.0.0
-author: Research Reading Agent
+license: MIT
+compatibility: Works with Claude Code, ChatGPT/Codex CLI, and Gemini CLI.
+metadata:
+  author: Research Reading Agent
+  version: "1.0.0"
 ---
 
 # 實驗設計技能

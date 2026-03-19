@@ -1,8 +1,11 @@
 ---
 name: idea-generation
 description: "學術研究的 Idea 產生技能——從發散到收斂，系統化地產出高品質研究構想。當使用者想腦力激盪研究方向、找新 research idea、或問「我接下來可以做什麼研究」時，一定要使用此技能。觸發詞包括：brainstorm、想 idea、研究方向、下一步做什麼、有什麼可以研究的、找 gap、research proposal。適用於任何階段的學術研究構想生成。"
-version: 1.0.0
-author: research-skills
+license: MIT
+compatibility: Works with Claude Code, ChatGPT/Codex CLI, and Gemini CLI.
+metadata:
+  author: research-skills
+  version: "1.0.0"
 ---
 
 # 02 — Idea Generation：學術研究構想產生

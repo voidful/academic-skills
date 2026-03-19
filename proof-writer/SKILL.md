@@ -1,11 +1,14 @@
 ---
 name: proof-writer
 description: "數學證明撰寫技能 — 從主張提取到 LaTeX 排版的完整證明工作流。當使用者需要撰寫或驗證數學定理、引理、命題的形式證明，或需要推導公式、整理理論分析時，一定要使用此技能。觸發詞包括：數學證明、prove、theorem、lemma、proposition、推導、理論分析、寫 proof、LaTeX 數學、formal proof。適用於機器學習理論、統計學習理論、最佳化等需要嚴謹數學推導的場景。"
-version: 1.0.0
-author: weed
+license: MIT
+compatibility: Works with Claude Code, ChatGPT/Codex CLI, and Gemini CLI.
+metadata:
+  author: weed
+  version: "1.0.0"
 ---
 
-# 04-proof-writer：數學證明撰寫技能
+# proof-writer：數學證明撰寫技能
 
 ## 概述
 

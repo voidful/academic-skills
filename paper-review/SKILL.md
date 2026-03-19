@@ -1,11 +1,14 @@
 ---
 name: paper-review
 description: "學術論文審稿技能 — 以結構化四步驟流程完成深度論文審查，涵蓋批判性審查、分數預測、要點精煉與正式審稿產出。當使用者需要 review 一篇論文、模擬 reviewer 反應、評估論文能否被接收、或幫助判斷論文優缺點時，一定要使用此技能。觸發詞包括：review 這篇、幫我審稿、reviewer 會怎麼說、這篇能上嗎、paper review、給分數、找 weakness。適用於任何學術論文的審稿模擬與評估。"
-version: 1.0.0
-author: weed
+license: MIT
+compatibility: Works with Claude Code, ChatGPT/Codex CLI, and Gemini CLI.
+metadata:
+  author: weed
+  version: "1.0.0"
 ---
 
-# 06-paper-review：學術論文審稿技能
+# paper-review：學術論文審稿技能
 
 ## 概述
 

@@ -1,17 +1,17 @@
-# Academic Research Skills for Claude Code
+# Academic Research Skills
 
-一套完整的學術研究 Skill 套件庫，供 Claude Code 使用。涵蓋從論文閱讀到撰寫、審稿的完整研究流程。
+一套完整的學術研究 Skill 套件，符合 [Agent Skills 開放標準](https://agentskills.io/specification)。支援 **Claude Code**、**ChatGPT / Codex CLI**、**Gemini CLI**。
 
 ## 功能總覽
 
-| # | Skill | 指令 | 說明 |
-|---|-------|------|------|
-| 01 | Paper Reading | `/read-paper` | 太奶角色論文導讀，繁中敘事風格 |
-| 02 | Idea Generation | `/brainstorm` | 發散→搜索→收斂三階段構思 |
-| 03 | Experiment Design | `/experiment` | 假設→變數→指標→Baseline→Ablation |
-| 04 | Proof Writer | `/prove` | 理論推導與 LaTeX 數學證明 |
-| 05 | Paper Writing | `/write-paper` | 頂會標準論文撰寫 |
-| 06 | Paper Review | `/review` | 4步驟學術審稿流程 |
+| # | Skill | 說明 |
+|---|-------|------|
+| 01 | Paper Reading | 太奶角色論文導讀，繁中敘事風格 |
+| 02 | Idea Generation | 發散→搜索→收斂三階段構思 |
+| 03 | Experiment Design | 假設→變數→指標→Baseline→Ablation |
+| 04 | Proof Writer | 理論推導與 LaTeX 數學證明 |
+| 05 | Paper Writing | 頂會標準論文撰寫 |
+| 06 | Paper Review | 4步驟學術審稿流程 |
 
 ## 研究流程 Pipeline
 
@@ -25,22 +25,17 @@
 
 ## 安裝與使用
 
-### 方法一：直接 Clone
+本套件支援三大 AI agent 平台。選擇你使用的平台，將倉庫 clone 到對應的 skills 目錄即可。
+
+### Claude Code
 
 ```bash
-git clone <repo-url> ~/research-skills
-cd ~/research-skills
-# 在 Claude Code 中開啟此目錄即可使用
+# 使用者層級（全域可用）
+git clone <repo-url> ~/.claude/skills/academic-research
+
+# 專案層級（僅該專案可用）
+git clone <repo-url> .claude/skills/academic-research
 ```
-
-### 方法二：加入現有專案
-
-```bash
-# 將本倉庫作為子目錄加入你的研究專案
-cp -r <repo-path> ./research-skills/
-```
-
-### 使用方式
 
 在 Claude Code 中使用 `/` 指令：
 
@@ -53,32 +48,63 @@ cp -r <repo-path> ./research-skills/
 /review              # 審稿一篇論文
 ```
 
+### ChatGPT / Codex CLI
+
+```bash
+# 使用者層級
+git clone <repo-url> ~/.codex/skills/academic-research
+
+# 專案層級
+git clone <repo-url> .codex/skills/academic-research
+```
+
+Skills 會自動被偵測。可透過 `@academic-research` 提及來啟用，或讓 agent 根據任務自動匹配。
+
+### Gemini CLI
+
+```bash
+# 使用者層級
+git clone <repo-url> ~/.gemini/skills/academic-research
+
+# 專案層級
+git clone <repo-url> .gemini/skills/academic-research
+```
+
+Skills 會透過 `activate_skill` 機制自動匹配使用者意圖。
+
+### 通用方式
+
+將本倉庫目錄複製到你的 AI agent 的 skills 目錄即可。根目錄 `SKILL.md` 作為入口，agent 會透過 `*/SKILL.md` 模式自動發現所有子 skills。
+
 ## 目錄結構
 
 ```
-├── CLAUDE.md                    # 調度器（定義路由與規則）
-├── 01-paper-reading/            # 論文導讀
+├── SKILL.md                     # 根入口（monorepo skill，路由到子 skills）
+├── CLAUDE.md                    # Claude Code 調度器（定義 / 指令路由）
+├── paper-reading/               # 論文導讀
 │   ├── SKILL.md
 │   └── references/
-├── 02-idea-generation/          # Idea 發想
+├── idea-generation/             # Idea 發想
 │   ├── SKILL.md
 │   └── references/
-├── 03-experiment-design/        # 實驗設計
+├── experiment-design/           # 實驗設計
 │   ├── SKILL.md
 │   ├── references/
 │   └── templates/
-├── 04-proof-writer/             # 理論證明
+├── proof-writer/                # 理論證明
 │   ├── SKILL.md
 │   └── references/
-├── 05-paper-writing/            # 論文撰寫
+├── paper-writing/               # 論文撰寫
 │   ├── SKILL.md
-│   ├── references/
-│   └── templates/
-├── 06-paper-review/             # 學術審稿
+│   └── references/
+├── paper-review/                # 學術審稿
 │   ├── SKILL.md
 │   ├── references/
 │   └── templates/
 └── shared/                      # 共享資源
+    ├── chinese-academic-glossary.md
+    ├── conference-standards.md
+    └── researcher-philosophies.md
 ```
 
 ## 語言說明
@@ -89,6 +115,7 @@ cp -r <repo-path> ./research-skills/
 
 ## 設計參考
 
+- [Agent Skills 開放標準](https://agentskills.io/specification)
 - [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs)
 - [Master-cai/Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills)
 
