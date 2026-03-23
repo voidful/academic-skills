@@ -1,6 +1,6 @@
 ---
 name: academic-research
-description: "Complete academic research skill suite covering the full pipeline: paper reading (read/explain papers with storytelling), idea generation (brainstorm research directions), experiment design (plan experiments, ablation, baselines), proof writing (mathematical proofs, LaTeX theorems), paper writing (draft to camera-ready for top venues like NeurIPS/ICLR/ACL), and paper review (structured 4-step review with scoring). Trigger keywords: read paper, brainstorm, experiment design, prove, write paper, review, LaTeX, research, NeurIPS, ICLR, ACL, arXiv, 讀論文, 寫論文, 審稿, 實驗設計, 數學證明, 研究方向."
+description: "Complete academic research skill suite covering the full pipeline: paper reading (read/explain papers with storytelling), idea generation (brainstorm research directions), experiment design (plan experiments, ablation, baselines), proof writing (mathematical proofs, LaTeX theorems), paper writing (draft to camera-ready for top venues like NeurIPS/ICLR/ACL), paper review (structured 4-step review with scoring), and professor fit analysis (evaluate advisors, cold emails, interview strategy). Trigger keywords: read paper, brainstorm, experiment design, prove, write paper, review, professor fit, advisor, cold email, LaTeX, research, NeurIPS, ICLR, ACL, arXiv, 讀論文, 寫論文, 審稿, 實驗設計, 數學證明, 研究方向, 教授分析, 選指導教授."
 license: MIT
 compatibility: Works with Claude Code, ChatGPT/Codex CLI, and Gemini CLI.
 metadata:
@@ -26,6 +26,7 @@ metadata:
 | 數學證明、prove、theorem、推導 | Proof Writer | [proof-writer/SKILL.md](proof-writer/SKILL.md) | 理論推導與數學證明 |
 | 寫論文、paper writing、improve my paper、LaTeX | Paper Writing | [paper-writing/SKILL.md](paper-writing/SKILL.md) | 論文撰寫（頂會標準） |
 | review、審稿、reviewer 會怎麼說、這篇能上嗎 | Paper Review | [paper-review/SKILL.md](paper-review/SKILL.md) | 4 步驟學術審稿 |
+| 教授分析、professor fit、選指導教授、cold email、申請策略 | Professor Fit Analyser | [professor-fit-analyser/SKILL.md](professor-fit-analyser/SKILL.md) | 教授適配度分析與申請策略 |
 
 **指引**：當使用者的請求匹配上方觸發條件時，請讀取對應路徑的 `SKILL.md` 並依照其指示執行。如果使用者的需求橫跨多個 Skill，請依照下方 Pipeline 順序依序處理。
 
@@ -34,6 +35,8 @@ metadata:
 ## Skill Pipeline
 
 ```
+professor-fit-analyser ─┐
+                        ↓
 paper-reading ──→ idea-generation ──→ experiment-design
       │                                       │
       ↓                                       ↓

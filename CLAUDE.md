@@ -14,10 +14,13 @@
 | `/prove` | `proof-writer/SKILL.md` | 理論推導與數學證明 |
 | `/write-paper` | `paper-writing/SKILL.md` | 論文撰寫（頂會標準） |
 | `/review` | `paper-review/SKILL.md` | 4步驟學術審稿 |
+| `/prof-fit` | `professor-fit-analyser/SKILL.md` | 教授適配度分析 |
 
 ## Skill Pipeline
 
 ```
+professor-fit-analyser ─┐
+                        ↓
 paper-reading ──→ idea-generation ──→ experiment-design
       │                                       │
       ↓                                       ↓

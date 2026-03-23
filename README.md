@@ -17,10 +17,13 @@ Gemini CLI: `git clone <repo> ~/.gemini/skills/academic-research`
 | 04 | Proof Writer | 理論推導與 LaTeX 數學證明 |
 | 05 | Paper Writing | 頂會標準論文撰寫 |
 | 06 | Paper Review | 4步驟學術審稿流程 |
+| 07 | Professor Fit Analyser | 教授適配度分析與申請策略 |
 
 ## 研究流程 Pipeline
 
 ```
+教授分析 ─┐
+   07     ↓
 閱讀論文 → 發想 Idea → 設計實驗 → 理論推導 → 撰寫論文 → 審稿修改
    01          02          03          04          05         06
                                                     ↑          │
@@ -51,6 +54,7 @@ git clone <repo-url> .claude/skills/academic-research
 /prove               # 撰寫數學證明
 /write-paper         # 撰寫論文各章節
 /review              # 審稿一篇論文
+/prof-fit            # 分析教授適配度
 ```
 
 ### ChatGPT / Codex CLI
@@ -103,6 +107,10 @@ Skills 會透過 `activate_skill` 機制自動匹配使用者意圖。
 │   ├── SKILL.md
 │   └── references/
 ├── paper-review/                # 學術審稿
+│   ├── SKILL.md
+│   ├── references/
+│   └── templates/
+├── professor-fit-analyser/      # 教授適配度分析
 │   ├── SKILL.md
 │   ├── references/
 │   └── templates/
